@@ -28,6 +28,13 @@ body {
   margin-top: 80px;
   font-family: "Press Start 2P";
 }
+
+.subtitle {
+  font-family: "Press Start 2P";
+  position: absolute;
+  margin-left: 160px;
+  margin-top: 130px;
+}
  
 
 .form-inline {
@@ -61,6 +68,10 @@ body {
 .table {
   position: relative;
   top: 50px;
+}
+
+.dutytable {
+  height: 20px;
 }
 
 .tcheck {
