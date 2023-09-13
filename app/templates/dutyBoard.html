@@ -30,16 +30,16 @@
     </div>
     <table class="table table-bordered">
         <thead >
-            <tr>
+            <tr class="table-success">
                 <th scope="col">Name</th>
                 <th scope="col">Email</th>
                 <th scope="col">Role</th>
                 <th scope="col">What are you doing today?</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="tusers">
             {% for user in users %}
-            <tr>
+            <tr class="table-success">
                 <td>{{user[1]}}</td>
                 <td>{{user[0]}}</td>
                 <td>{{user[2]}}</td>
@@ -49,6 +49,11 @@
         </tbody>
     </table>
   </body>
+  <script>
+    setTimeout(function(){
+   window.location.reload();
+}, 60000);
+  </script>
   <footer>
     <div class="bottom">
     <p class="b1"> Brought to you by the IM team</p>

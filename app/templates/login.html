@@ -34,19 +34,13 @@
       <textarea class="form-control" id="descriptioninput" name="description" rows="3"></textarea>
     </div>
 
-    <button type="submit" onclick="refresh()" class="btn btn-primary mb-2">Check In</button>
-    <script>
-      let dutyboard = window.location(dutyBoard.html);
-      function refresh() {
-        dutyboard.location.reload(true);
-      }
-    </script>
+    <button type="submit" class="btn btn-primary mb-2">Check In</button>
   </div>
   </form>
 
-  <table class="table table-bordered table-dark tcheck">
+  <table class="table table-bordered tcheck">
     <thead class="thcheck">
-        <tr>
+        <tr class="table-success">
             <th scope="col">Name</th>
             <th scope="col">Email</th>
             <th class="deleteth" scope="col">Delete</th>
@@ -54,7 +48,7 @@
     </thead>
     <tbody class="tbcheck">
         {% for user in users %}
-        <tr>
+        <tr class="table-success">
             <td>{{user[1]}}</td>
             <td>{{user[0]}}</td>
             <form action="/delete" method="POST" class="form-inline">
