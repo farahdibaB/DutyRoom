@@ -56,12 +56,13 @@ def force_delete_table():
     _execute_sql(sql_delete_table, False)
 
 def delete_user(email):
-    sql_delete_user = """DELETE FROM usernames WHERE email = ?"""
     try:
         conn = sqlite3.connect(_path_to_db_file)
         cursor = conn.cursor()
         print("Connected to SQLite")
+        sql_delete_user = """DELETE FROM usernames WHERE email = ?"""
         cursor.execute(sql_delete_user, (email,))
+        conn.commit()
         cursor.close()
     except sqlite3.Error as error:
         print("Failed to read data from sqlite table", error)

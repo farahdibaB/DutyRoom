@@ -70,20 +70,16 @@ body {
   top: 50px;
 }
 
-.dutytable {
+/* .dutytable {
   height: 20px;
-}
+} */
 
 .tcheck {
   width: 50%;
   right: 0px;
   top: 0px;
   position: absolute;
-}
-
-.deleteth {
-  /* width: 0%; */
-}
+} 
 
 .checkoutbtn {
   margin-left: 0px;
@@ -96,4 +92,42 @@ footer {
   bottom: 0px;
   width: 100%;
   font-family: "Press Start 2P";
+}
+
+.styled-table {
+  position: relative;
+  top: 200px;
+  border-collapse: collapse;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  min-width: 1500px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.styled-table thead tr {
+  border-top-right-radius: 10px;
+  background-color: #0abf53;;
+  color: #ffffff;
+  text-align: left;
+}
+
+.styled-table th {
+  border-radius: 10px
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+
+.styled-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+  border-bottom: 2px solid #0abf53;;
 }

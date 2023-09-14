@@ -56,7 +56,7 @@ def create_app():
             database.insert_user(name, email, role, description)
             users = database.get_data()
 
-            return render_template('login.html', users=users)
+            return redirect(url_for("home"))
 
     
     @app.route('/dutyBoard')
@@ -69,7 +69,7 @@ def create_app():
         email = request.form["getEmail"]
         print(email)
         database.delete_user(email)
-        return render_template('login.html')    
+        return redirect(url_for("home"))
         
     @app.route('/forceDelete', methods=['POST', 'GET'])
     def force_delete():
