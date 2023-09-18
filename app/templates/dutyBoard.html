@@ -27,15 +27,18 @@
         <div class="text">
             <h1 class="boardTitle">Reporting for Duty</h1> 
             <p class="subtitle">Working hard to win</p>
-        </div>     
-    </div>
-    <table class="styled-table">
+        </div>  
+        <div class="images">
+          <img src="{{ url_for('static', filename='img/pacman.svg') }}" id="pacman2">
+      </div>   
+    <table class="styled-tables">
         <thead>
             <tr>
                 <th scope="col">Name</th>
                 <th scope="col">Email</th>
                 <th scope="col">Role</th>
                 <th scope="col">What are you doing today?</th>
+                <th scope="col"></th>
             </tr>
         </thead>
         <tbody">
@@ -45,19 +48,23 @@
                 <td>{{user[0]}}</td>
                 <td>{{user[2]}}</td>
                 <td>{{user[3]}}</td>
+                <td><img src="{{ url_for('static', filename='img/pinkPacman.gif') }}" id="pinkpacman"></td>
             </tr>
             {% endfor %}
         </tbody>
     </table>
+  </div>
   </body>
   <script>
     setTimeout(function(){
    window.location.reload();
 }, 60000);
   </script>
+
   <footer>
     <div class="bottom">
-    <p class="b1"> Brought to you by the IM team</p>
+    <p class="b1"> Brought to you by the IM team </p>
+    <img src="{{ url_for('static', filename='img/treasure.gif') }}" id="treasure">
     </div>
   </footer>
 </html>
