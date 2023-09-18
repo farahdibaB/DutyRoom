@@ -20,7 +20,6 @@
     <title>Duty Room</title>
   </head>
   <body>
-    <div id="container">
         <div class="images">
             <img src="{{ url_for('static', filename='img/pacman.svg') }}" id="pacman">
         </div>
@@ -30,7 +29,8 @@
         </div>  
         <div class="images">
           <img src="{{ url_for('static', filename='img/pacman.svg') }}" id="pacman2">
-      </div>   
+      </div>
+      <div class = "table-scroll">
     <table class="styled-tables">
         <thead>
             <tr>
@@ -41,7 +41,7 @@
                 <th scope="col"></th>
             </tr>
         </thead>
-        <tbody">
+        <tbody class="user-body">
             {% for user in users %}
             <tr class="table-users">
                 <td>{{user[1]}}</td>
@@ -53,14 +53,24 @@
             {% endfor %}
         </tbody>
     </table>
-  </div>
+  </div>  
   </body>
   <script>
     setTimeout(function(){
    window.location.reload();
 }, 60000);
   </script>
+  <script>
+    var tableRows = document.getElementsByClassName("table-users");
 
+    for(i=0; i<tableRows.length; i++) {
+      if(i%5==0) tableRows[i].style.color = "red";
+      else if(i%2==0) tableRows[i].style.color = "aquamarine";
+      else if(i%3==0) tableRows[i].style.color = "blue";
+      else if(i%4==0) tableRows[i].style.color = "pink";
+      else tableRows[i].style.color = "yellow";
+    }
+  </script>
   <footer>
     <div class="bottom">
     <p class="b1"> Brought to you by the IM team </p>
