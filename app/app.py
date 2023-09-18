@@ -37,9 +37,6 @@ def create_app():
        
         return render_template('login.html')
     
-    @app.route('/registerForm')
-    def registerForm():
-        return render_template('registerForm.html')
 
     @app.route('/checkin', methods=['POST'])
     def user_form():

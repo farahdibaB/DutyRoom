@@ -11,12 +11,12 @@ body {
   margin-right: auto;
 }
 
- .title {
+ .checkInTitle {
   font-size: 30px;
   white-space: nowrap; 
   position: absolute;
-  margin-left: 160px;
-  margin-top: -80px;
+  margin-left: 180px;
+  margin-top: 40px;
   font-family: "Press Start 2P";
 }
 
@@ -75,7 +75,6 @@ body {
 } */
 
 .tcheck {
-  width: 50%;
   right: 0px;
   top: 0px;
   position: absolute;
@@ -100,7 +99,7 @@ footer {
   border-collapse: collapse;
   font-size: 0.9em;
   font-family: sans-serif;
-  min-width: 1500px;
+  min-width: 1000px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
 
@@ -131,3 +130,27 @@ footer {
 .styled-table tbody tr:last-of-type {
   border-bottom: 2px solid #0abf53;;
 }
+
+/* Split the screen in half */
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+/* Control the left side */
+.left {
+  left: 0;
+  background-image: url("../img/background.png");
+}
+
+/* Control the right side */
+.right {
+  right: 0;
+  background-color: #ffffff;
+}
+

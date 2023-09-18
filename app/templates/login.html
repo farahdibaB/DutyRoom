@@ -17,7 +17,8 @@
   </head>
 <body>
   <div id="wrapper">
-  <h1 class="title">Check In</h1> 
+  <div class="split left">
+  <h1 class="title checkInTitle">Check In</h1> 
   <div class="box">
   <form action="/checkin" method="POST" class="form-inline">
     <label class="sr-only" for="username">Name</label>
@@ -36,8 +37,9 @@
 
     <button type="submit" class="btn btn-primary mb-2">Check In</button>
   </div>
+</div>
   </form>
-
+<div class="split right">
   <table class="table table-bordered tcheck">
     <thead class="thcheck">
         <tr class="table-success">
@@ -59,5 +61,6 @@
         {% endfor %}
     </tbody>
 </table>
+</div>
 </div>
 </body>
