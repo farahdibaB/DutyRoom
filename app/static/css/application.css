@@ -123,11 +123,11 @@ footer {
 
 
 .table-scroll {
-  width: 2000px;
+  width: 900px;
   position: relative;
   height:450px;
-  top:60px;
-  left:130px;
+  top:200px;
+  right:140px;
   overflow-y:auto; 
 
 }
@@ -140,7 +140,7 @@ footer {
   border-collapse: collapse;
   font-size: 0.9em;
   font-family: sans-serif;
-  min-width: 1000px;
+  min-width: 900px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
   /* overflow-y: auto; */
 }

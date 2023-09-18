@@ -37,7 +37,7 @@
                 <th scope="col">Name</th>
                 <th scope="col">Email</th>
                 <th scope="col">Role</th>
-                <th scope="col">What are you doing today?</th>
+                <th scope="col">What brings you to the Duty Room?</th>
                 <th scope="col"></th>
             </tr>
         </thead>
@@ -60,15 +60,16 @@
    window.location.reload();
 }, 60000);
   </script>
+  <!-- out different row text colour -->
   <script>
     var tableRows = document.getElementsByClassName("table-users");
 
     for(i=0; i<tableRows.length; i++) {
-      if(i%5==0) tableRows[i].style.color = "red";
-      else if(i%2==0) tableRows[i].style.color = "aquamarine";
-      else if(i%3==0) tableRows[i].style.color = "blue";
-      else if(i%4==0) tableRows[i].style.color = "pink";
-      else tableRows[i].style.color = "yellow";
+      if(i%8==0) tableRows[i].style.color = "#FF0000";
+      else if(i%2==0) tableRows[i].style.color = "#00FFFF";
+      else if(i%3==0) tableRows[i].style.color = "#2121DE";
+      else if(i%5==0) tableRows[i].style.color = "#FFB8FF";
+      else tableRows[i].style.color = "#FFB852";
     }
   </script>
   <footer>
