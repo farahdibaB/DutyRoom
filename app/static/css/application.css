@@ -13,11 +13,11 @@ body {
 }
 
  .checkInTitle {
+  color: #FFFF42;
   font-size: 30px;
   white-space: nowrap; 
   position: absolute;
-  margin-left: 180px;
-  margin-top: 40px;
+  margin-top: 60px;
   font-family: "Press Start 2P";
 }
 
@@ -26,7 +26,7 @@ body {
   font-size: 30px;
   white-space: nowrap; 
   position: absolute;
-  margin-left: 360px;
+  margin-left: 380px;
   margin-top: 80px;
   font-family: "Press Start 2P";
 }
@@ -36,7 +36,7 @@ body {
   font-family: "Press Start 2P";
   white-space: nowrap; 
   position: absolute;
-  margin-left: 460px;
+  margin-left: 480px;
   margin-top: 130px;
 }
 
@@ -45,23 +45,33 @@ body {
   position: absolute;
 }
  
+.sr-only {
+  margin-top: 20px;
+  font-family: "Press Start 2P";
+  color: #FFFF42;
+}
+
+.mr-sm-2 {
+  font-family: "Press Start 2P";
+}
 
 .form-inline {
   /* position: absolute; */
-  margin-top: 150px;
-  margin-left: 100px;
+  margin-top: 110px;
   width: 400px;
 }
   
 .btn {
-  margin-left: 150px;
+  margin-left: 120px;
   margin-top: 20px;
   background-color: #0abf53;
   border: none;
+  font-family: "Press Start 2P";
 }
 
 #pacman {
-  float: left;
+  position:fixed;
+  /* float: left; */
   margin-top: 45px;
   margin-left: 220px;
   width:100px;
@@ -73,9 +83,25 @@ body {
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
   margin-top: 45px;
-  margin-left: 620px;
+  margin-left: 970px;
   width:100px;
   height: 100px;
+}
+
+.fullboard {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.titleform {
+  display: flex;
+  justify-content: center;
+}
+
+.heading {
+  position: relative;
+  right: 650px;
 }
 
 #pinkpacman {
@@ -123,13 +149,18 @@ footer {
 
 
 .table-scroll {
-  width: 900px;
-  position: relative;
-  height:450px;
-  top:200px;
-  right:140px;
-  overflow-y:auto; 
+  display: flex;
+  flex-direction: column-reverse;
+  width: 1000px;
+  position: fixed;
+  height:750px;
+  bottom: 250px;
+  /* left:150px; */
+  overflow-y:scroll; 
+}
 
+.table-scroll::-webkit-scrollbar{
+  display: none;
 }
 
 .styled-tables { 
@@ -138,9 +169,9 @@ footer {
   left: 160px;
   top: 200px;
   border-collapse: collapse;
-  font-size: 0.9em;
-  font-family: sans-serif;
-  min-width: 900px;
+  font-size: 12px;
+  font-family: "Press Start 2P";
+  /* min-width: 900px; */
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
   /* overflow-y: auto; */
 }
@@ -163,6 +194,11 @@ footer {
     padding: 12px 15px;
 }
 
+.styled-tables td {
+  word-break: break-all;
+
+}
+
 
 .styled-tables tbody tr td {
   border-bottom: 1px solid #0abf53;
@@ -177,6 +213,29 @@ footer {
   border-bottom-right-radius: 20px;
 }
 
+/* table on login page */
+.table-success {
+  border-style: none;
+  --bs-table-bg: NONE !important;
+
+}
+
+.table-success td, .table-success th {
+  border-style: none;
+  font-family: 'Press Start 2P';
+  border-bottom: 1px solid #0abf53;
+  /* padding: 15px; */
+}
+
+.checkoutbtn {
+  background-color: red;
+}
+
+.table-success tr{
+  border-style: none !important;
+  border-width: none;
+
+}
 
 /* login page */
 
@@ -194,12 +253,14 @@ footer {
 /* Control the left side */
 .left {
   left: 0;
-  background-image: url("../img/background.png");
+  background-color: black;
+  /* background-image: url("../img/background.png"); */
 }
 
 /* Control the right side */
 .right {
+  overflow-y:auto;
   right: 0;
-  background-color: #ffffff;
+  background-color: #FFFF42;
 }
 

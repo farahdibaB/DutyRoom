@@ -18,6 +18,7 @@
 <body>
   <div id="wrapper">
   <div class="split left">
+    <div class="titleform">
   <h1 class="title checkInTitle">Check In</h1> 
   <div class="box">
   <form action="/checkin" method="POST" class="form-inline">
@@ -31,12 +32,13 @@
     <input type="text" class="form-control mb-2 mr-sm-2" id="roleinput" name="role" placeholder="IM">
 
     <div class="form-group">
-      <label for="descriptioninput">What are you here to do today?</label>
-      <textarea class="form-control" id="descriptioninput" name="description" rows="3"></textarea>
+      <label class="sr-only" for="descriptioninput">What are you here to do today?</label>
+      <textarea class="form-control mb-2 mr-sm-2" rows="8" cols="40" id="descriptioninput" name="description" placeholder="110 character limit" maxlength="110"></textarea>
     </div>
 
     <button type="submit" class="btn btn-primary mb-2">Check In</button>
   </div>
+</div>
 </div>
   </form>
 <div class="split right">

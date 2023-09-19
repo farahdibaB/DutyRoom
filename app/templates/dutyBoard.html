@@ -20,6 +20,8 @@
     <title>Duty Room</title>
   </head>
   <body>
+    <div class="fullboard">
+      <div class="heading">
         <div class="images">
             <img src="{{ url_for('static', filename='img/pacman.svg') }}" id="pacman">
         </div>
@@ -30,13 +32,14 @@
         <div class="images">
           <img src="{{ url_for('static', filename='img/pacman.svg') }}" id="pacman2">
       </div>
+    </div>
       <div class = "table-scroll">
     <table class="styled-tables">
         <thead>
             <tr>
-                <th scope="col">Name</th>
+                <th style="width:10%" scope="col">Name</th>
                 <th scope="col">Email</th>
-                <th scope="col">Role</th>
+                <th style="width:15%" scope="col">Role</th>
                 <th scope="col">What brings you to the Duty Room?</th>
                 <th scope="col"></th>
             </tr>
@@ -53,7 +56,8 @@
             {% endfor %}
         </tbody>
     </table>
-  </div>  
+  </div>
+</div>  
   </body>
   <script>
     setTimeout(function(){
