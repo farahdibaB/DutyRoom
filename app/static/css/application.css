@@ -153,8 +153,8 @@ footer {
   flex-direction: column-reverse; */
   width: 1000px;
   position: fixed;
-  height:750px;
-  bottom: 250px;
+  height:60vh;
+  top: 200px;
   /* left:150px; */
   overflow-y:scroll;
 }
