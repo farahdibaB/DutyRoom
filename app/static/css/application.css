@@ -149,14 +149,14 @@ footer {
 
 
 .table-scroll {
-  display: flex;
-  flex-direction: column-reverse;
+  /* display: flex;
+  flex-direction: column-reverse; */
   width: 1000px;
   position: fixed;
   height:750px;
   bottom: 250px;
   /* left:150px; */
-  overflow-y:scroll; 
+  overflow-y:scroll;
 }
 
 .table-scroll::-webkit-scrollbar{
@@ -165,7 +165,7 @@ footer {
 
 .styled-tables { 
   border-radius: 20px;
-  /* position: absolute; */
+  /* position: fixed; */
   left: 160px;
   top: 200px;
   border-collapse: collapse;
@@ -224,6 +224,7 @@ footer {
   border-style: none;
   font-family: 'Press Start 2P';
   border-bottom: 1px solid #0abf53;
+  color: #FFFF42;
   /* padding: 15px; */
 }
 
@@ -261,6 +262,6 @@ footer {
 .right {
   overflow-y:auto;
   right: 0;
-  background-color: #FFFF42;
+  background-color: #2121DE;
 }
 
