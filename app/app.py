@@ -2,16 +2,16 @@ import logging
 import sqlite3
 from os.path import exists
 
-from Adyen.util import is_valid_hmac_notification
+# from Adyen.util import is_valid_hmac_notification
 from flask import Flask, render_template, send_from_directory, request
 
-from main import database
-from main import config
+from app.main import database
+from app.main import config
 from main.config import *
-from main.onboard import go_to_link
-from main.register import legal_entity
-from main.store import *
-from main.business import *
+# from main.onboard import go_to_link
+# from main.register import legal_entity
+# from main.store import *
+# from main.business import *
 
 legalName =""
 
