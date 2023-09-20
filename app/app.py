@@ -10,7 +10,7 @@ from main import config
 from main.config import *
 # from main.onboard import go_to_link
 # from main.register import legal_entity
-# from main.store import *
+from main.store import *
 # from main.business import *
 
 legalName =""
