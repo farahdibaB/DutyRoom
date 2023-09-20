@@ -35,10 +35,15 @@ def create_table():
 
 # function to insert a user into the database table
 def insert_user(user, email, role, description):
+    conn = sqlite3.connect(_path_to_db_file)
+    cursor = conn.cursor()
     sql_create_table = """CREATE TABLE IF NOT EXISTS usernames(email PRIMARY KEY, user NOT NULL, role NOT NULL, description NOT NULL);"""
-    _execute_sql(sql_create_table, False)
-    sql_insert_user = "INSERT INTO usernames VALUES ('" + email + "', '" + user + "', '" + role + "', '" + description + "');"
-    _execute_sql(sql_insert_user, False)
+    # _execute_sql(sql_create_table, False)
+    cursor.execute(sql_create_table)
+    sql_insert_user = """INSERT INTO usernames (email, user, role, description) VALUES (?, ?, ?, ?)"""
+    cursor.execute(sql_insert_user, (email, user, role, description))
+    conn.commit()
+    conn.close()
     print("user added")
 
 # function to validate login details and retrieve lemId
