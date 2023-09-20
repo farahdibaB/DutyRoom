@@ -2,16 +2,13 @@ import logging
 import sqlite3
 from os.path import exists
 
-# from Adyen.util import is_valid_hmac_notification
-from flask import Flask, render_template, send_from_directory, request
+
+from flask import Flask, render_template, send_from_directory, request, url_for, redirect
 
 from main import database
 from main import config
 from main.config import *
-# from main.onboard import go_to_link
-# from main.register import legal_entity
-from main.store import *
-# from main.business import *
+
 
 legalName =""
 
@@ -32,10 +29,10 @@ def create_app():
         users = database.get_data()
         return render_template('login.html', users=users)
 
-    @app.route('/login')
-    def login():
+    # @app.route('/login')
+    # def login():
        
-        return render_template('login.html')
+    #     return render_template('login.html')
     
 
     @app.route('/checkin', methods=['POST'])
@@ -76,7 +73,7 @@ def create_app():
     @app.route('/favicon.ico')
     def favicon():
         return send_from_directory(os.path.join(app.root_path, 'static'),
-                                   'img/banana.png')
+                                   )
 
     initialise_db(app.root_path)
 
