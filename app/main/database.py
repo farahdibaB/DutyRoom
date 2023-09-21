@@ -25,7 +25,7 @@ def _execute_sql(sql, read):
 # function to create database table
 def create_table():
     sql_create_table = """CREATE TABLE users(username PRIMARY KEY, password NOT NULL, lem_id NOT NULL);"""
-    _execute_sql(sql_create_table)
+    _execute_sql(sql_create_table, False)
     # create also table for stores
     sql_create_table = """CREATE TABLE stores(store_id PRIMARY KEY, lem_id NOT NULL, reference NOT NULL);"""
     _execute_sql(sql_create_table, False)
