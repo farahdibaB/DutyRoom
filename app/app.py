@@ -101,6 +101,6 @@ if __name__ == '__main__':
     web_app = create_app()
 
     logging.info(f"Running on http://localhost:{get_port()}")
-    web_app.run(debug=True, port=get_port(), host='0.0.0.0')
+    web_app.run(debug=False, port=get_port(), host='0.0.0.0')
 
 
