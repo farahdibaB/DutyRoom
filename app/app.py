@@ -6,7 +6,7 @@ from os.path import exists
 from flask import Flask, render_template, send_from_directory, request, url_for, redirect
 
 from main import config
-from main import database
+import database
 from main.config import *
 
 
