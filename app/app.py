@@ -5,9 +5,9 @@ from os.path import exists
 
 from flask import Flask, render_template, send_from_directory, request, url_for, redirect
 
-from main import config
+import config
 import database
-from main.config import *
+from config import *
 
 
 legalName =""
