@@ -151,7 +151,7 @@ footer {
 .table-scroll {
   /* display: flex;
   flex-direction: column-reverse; */
-  width: 1500px;
+  /* width: 1500px; */
   position: fixed;
   height:60vh;
   top: 200px;
