@@ -151,7 +151,7 @@ footer {
 .table-scroll {
   /* display: flex;
   flex-direction: column-reverse; */
-  width: 1000px;
+  width: 1500px;
   position: fixed;
   height:60vh;
   top: 200px;
@@ -177,6 +177,7 @@ footer {
 }
 
 .styled-tables thead tr {
+  height: 60px;
   background-color: #0abf53;;
   text-align: left;
 }
