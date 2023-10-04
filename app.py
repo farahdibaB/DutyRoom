@@ -29,11 +29,38 @@ def create_app():
         users = database.get_data()
         return render_template('login.html', users=users)
 
+    @app.route('/mobile')
+    def mobile():
+        users = database.get_data()
+        return render_template('mobile.html', users=users)
+
     # @app.route('/login')
     # def login():
        
     #     return render_template('login.html')
-    
+    @app.route('/checkin_m', methods=['POST'])
+    def user_form_m():
+        if request.method == 'POST':
+            users = database.get_data()
+
+            # get variables from request
+            name = request.form['name']
+            email = request.form['email']
+            role = request.form['role']
+            description = request.form['description']
+           
+            # insert into database
+            database.insert_user(name, email, role, description)
+            users = database.get_data()
+
+            return redirect(url_for("mobile"))
+
+    @app.route('/delete_m', methods=["POST"])
+    def deleteUser_m():
+        email = request.form["getEmail"]
+        print(email)
+        database.delete_user(email)
+        return redirect(url_for("mobile"))
 
     @app.route('/checkin', methods=['POST'])
     def user_form():
