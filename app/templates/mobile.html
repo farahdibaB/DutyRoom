@@ -43,7 +43,7 @@
 </div>
 </div>
 <div class="col-xs-12">
-  <table class="table table-bordered tcheckm">
+  <table class="table table-bordered tcheckm" style="max-width:320px">
     <thead class="thcheck">
         <tr class="table-success">
             <th scope="col">Email</th>
@@ -53,7 +53,7 @@
     <tbody class="tbcheck">
         {% for user in users %}
         <tr class="table-success">
-            <td>{{user[0]}}</td>
+            <td><span>{{user[0]}} </span></td>
             <form action="/delete_m" method="POST" class="form-inline">
               <input name="getEmail" value="{{user[0]}}" type=hidden>
             <td><button type="submit" name="{{user[0]}}" class="btn btn-primary mb-2 checkoutbtn">Check Out</button></td>

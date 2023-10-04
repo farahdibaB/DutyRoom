@@ -271,3 +271,9 @@ footer {
   background-color: #2121DE;
 }
 
+td span {
+  display:block;
+  width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
